@@ -1,11 +1,11 @@
-from Flask import Flask
-from flask_sqlalchemy import flask_sqlalchemy
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 
 def create_app()
-app = Flask(_name_)
+app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://database.db'
+app.config['SQALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
 from .views import main
 app.register_blueprint(main)

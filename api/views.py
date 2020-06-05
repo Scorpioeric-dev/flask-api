@@ -1,15 +1,15 @@
 from flask import Blueprint,jsonify
 
-main = Blueprint('main', _name_)
+main = Blueprint('main', __name__)
 
 @main.route('/add_movie', methods = ['POST'])
-def add_movie()
-return 'Done',201
+def add_movie():
+ return 'Done',201
 
 
-@main.route('/movies', methods = ['POST'])
-def movies()
+@main.route('/movies')
+def movies():
 
-movies = []
+ movies = []
 
-return jsonify({'movies' : movies})
+ return jsonify({'movies' : movies})
